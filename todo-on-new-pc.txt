@@ -1,0 +1,82 @@
+1. Change settings
+	- install shell extension - sudo apt install gnome-shell-extensions
+	- Turn on desktop icons gnome-extensions enable desktop-icons@csoriano
+	- Turn on User Themes gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
+	- Turn on Ubuntu appindicators gnome-extensions enable ubuntu-appindicators@ubuntu.com
+	- Turn on Ubuntu Dock gnome-extension enable ubuntu-dock@ubuntu.com
+	gsettings set ...
+	- Change touch pad disable on external mouse dconf org.gnome.desktop.peripherals.touchpad to disable-on-external-mouse
+	- Change org.gnome.shell.extensions.dash-to-dock dock-fixed to false 
+	- Change org.gnome.shell.extensions.dash-to-dock isolate-monitors to true
+	- Change org.gnome.shell.extensions.dash-to-dock isolate-workspaces to true
+	- Change org.gnome.shell.extensions.dash-to-dock show-show-apps-button to false
+	- Change org.gnome.shell.extensions.dash-to-dock show-trash to false
+	- Change org.gnome.shell.extensions.dash-to-dock autohide-in-fullscreen to true
+	- Change org.gnome.shell.extensions.dash-to-dock dash-max-icon-size to 34
+	- Change org.gnome.shell.extensions.dash-to-dock dock-position to 'BOTTOM'
+	- Change org.gnome.shell.extensions.dash-to-dock force-straight-corner to true
+	- Change org.gnome.shell.extensions.dash-to-dock show-mounts to false
+	- Change org.gnome.shell.extensions.desktop-icons show-home to false
+	- Change org.gnome.shell.extensions.desktop-icons show-trash to false
+	- Change org.gnome.desktop.wm.keybindings switch-to-workspace-down to ['<Super>Page_Down']
+	- Change org.gnome.desktop.wm.keybindings switch-to-workspace-up to ['<Super>Page_Up']
+	- Add new keybinding MANUALLY
+		gsettings get org.gnome.settings-daemon.plugins.media-keys custom-keybindings
+		gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "[<altered_list>]"
+		gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/ name '<New Browser Private Window>'
+		gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/ command 'microsoft-edge --inprivate'
+		gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/ binding '<Primary><m>Shift'
+	- Add no sleep on power MANUALLY
+	- Add no sleep on lid close MANUALLY
+	- Add no lock on lid close MANUALLY
+	- Add Percentage to battery widget
+2. Change shell look change .bashrc 
+if [ "$color_prompt" = yes ]; then
+    PS1='\[\033[01;32m\]\u\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]: '
+else
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+fi
+3. Set background picture
+4. Install ssh-server
+5. Install Clang-${LatestVersion}
+6. Install git
+7. Install CMake-${LatestVersion}
+8. Install ninja-${LatestVersion}
+9. Install Python-3
+6. Install Edge and make it a default browser
+7. Install Bitwarden
+8. Install CLion
+9. Install VSCode
+	- install C/C++ Extension Pack ext install ms-vscode.cpptools-extension-pack
+	- install Better C++ syntax ext install jeff-hykin.better-cpp-syntax
+	- install Code Spell Checker ext install streetsidesoftware.code-spell-checker
+	- install Doxygen Documentation Generator ext install cschlosser.doxdocgen
+	- install Git Blame ext install waderyan.gitblame
+	- install Git Extension Pack ext install donjayamanne.git-extension-pack
+	- install Git Graph ext install mhutchie.git-graph
+	- install GitLense ext install eamodio.gitlens
+	- install QML ext install bbenoist.QML
+	- install Shell Format ext install foxundermoon.shell-format
+	- install ShellCheck ext install timonwong.shellcheck
+	- install Bash Debug ext install rogalmic.bash-debug
+10. Install Meld
+11. Install Zoom
+12. Install Microsoft Teams
+13. Install GIMP
+14. Install Remmina
+15. Install Transmission
+16. Install Qt 5.17.2 and 6.${LatestVersion} MANUALLY
+
+if (WorkLaptop)
+	create /home/${UserName}/Personal folder
+	create /home/${UserName}/Personal/Documents folder
+	create /home/${UserName}/Personal/Downloads folder
+	create /home/${UserName}/Personal/Pictures folder
+	create /home/${UserName}/Personal/Projects folder
+	change Transmission download folder to create /home/${UserName}/Personal/Downloads
+fi (WorkLaptop)
+17. Install Ukrainian language pack for gedit MANUALLY
+18. Set gedit theme to Darkmacs MANUALLY
+
+
+
