@@ -31,8 +31,13 @@ if [[ $EUID != 0 ]]; then
     SUDO="sudo"
 fi
 
-INTERNET_STATUS=$(curl http://www.msftncsi.com/ncsi.txt)
+if ! command curl -version &>/dev/null; then
+    printStatus "Curl is not installed but needed for this script"
+    printStatus "Installing Curl"
+    ${SUDO} apt install curl
+fi
 
+INTERNET_STATUS=$(curl http://www.msftncsi.com/ncsi.txt)
 if [[ "${INTERNET_STATUS}" != "Microsoft NCSI" ]]; then
     printError "Internet is not present\nExiting"
     exit 0
@@ -44,11 +49,6 @@ ${SUDO} apt upgrade
 ${SUDO} apt full-upgrade
 ${SUDO} apt autoremove
 
-if ! command curl -version &>/dev/null; then
-    printStatus "Curl is not installed but needed for this script"
-    printStatus "Installing Curl"
-    ${SUDO} apt install curl
-fi
 
 VERSION=$(gnome-extensions version)
 if [[ "${VERSION}" == "" ]]; then
