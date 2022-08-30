@@ -320,7 +320,7 @@ else
     printStatus "Microsoft Edge is already installed"
 fi
 
-if [[ -f /bin/snap/bitwarden ]]; then
+if [[ ! -f /bin/snap/bitwarden ]]; then
     printStatus "Installing Bitwarden"
     ${SUDO} snap install bitwarden
 else
@@ -329,7 +329,7 @@ else
     ${SUDO} snap refresh bitwarden
 fi
 
-if [[ -f /bin/snap/clion ]]; then
+if [[ ! -f /bin/snap/clion ]]; then
     printStatus "Installing CLion"
     ${SUDO} snap install clion
 else
@@ -338,7 +338,7 @@ else
     ${SUDO} snap refresh clion
 fi
 
-if [[ -f /bin/snap/code ]]; then
+if [[ ! -f /bin/snap/code ]]; then
     printStatus "Installing VSCode"
     ${SUDO} snap install code
     printStatus "Installing C/C++ Extension Pack"
