@@ -52,7 +52,7 @@ fi
 
 if [[ ! -f /bin/snap/clion ]]; then
     printStatus "Installing CLion"
-    ${SUDO} snap install clion
+    ${SUDO} snap install clion --classic
 else
     printStatus "CLion is already installed"
     printStatus "Trying update"
