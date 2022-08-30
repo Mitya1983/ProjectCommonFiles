@@ -20,7 +20,7 @@ if [[ $EUID != 0 ]]; then
     SUDO="sudo"
 fi
 
-if ! command curl -version &>/dev/null; then
+if ! command curl --version &>/dev/null; then
     printStatus "Curl is not installed but needed for this script"
     printStatus "Installing Curl"
     ${SUDO} apt install curl
