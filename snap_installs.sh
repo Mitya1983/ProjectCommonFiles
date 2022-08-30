@@ -61,7 +61,7 @@ fi
 
 if [[ ! -f /bin/snap/code ]]; then
     printStatus "Installing VSCode"
-    ${SUDO} snap install code
+    ${SUDO} snap install code --classic
     printStatus "Installing C/C++ Extension Pack"
     code --install-extension ms-vscode.cpptools-extension-pack
     printStatus "Installing Better C++ syntax"
