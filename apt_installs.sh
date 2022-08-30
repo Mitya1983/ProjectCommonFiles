@@ -78,3 +78,6 @@ if ! command transmission-gtk --version &>/dev/null; then
 else
     printStatus "Transmission is already installed"
 fi
+
+printStatus "Installing OpenGL"
+${SUDO} apt install freeglut3-dev
