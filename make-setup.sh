@@ -246,7 +246,7 @@ ${SUDO} gsettings set org.gnome.desktop.background picture-uri file:////usr/shar
 ${SUDO} apt update
 
 printStatus "Setting up the terminal profile"
-donf load /org/gnome/terminal/legacy/profiles:/ <gnome-terminal-profiles.dconf
+dconf load /org/gnome/terminal/legacy/profiles:/ <gnome-terminal-profiles.dconf
 printStatus "Changing bashrc file"
 cp -fv bashrc ~/.bashrc
 
