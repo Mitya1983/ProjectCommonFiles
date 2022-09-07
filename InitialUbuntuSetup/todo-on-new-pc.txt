@@ -75,8 +75,6 @@ if (WorkLaptop)
 	create /home/${UserName}/Personal/Projects folder
 	change Transmission download folder to create /home/${UserName}/Personal/Downloads
 fi (WorkLaptop)
-17. Install Ukrainian language pack for gedit MANUALLY
-18. Set gedit theme to Darkmacs MANUALLY
 
 
 

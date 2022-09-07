@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+#TODO: Add Additional extensions to VSCode
+
 printStatus() {
     #if [[ $VERBOSE == true ]]; then
     printf "[STATUS] %s\n" "${1}"
