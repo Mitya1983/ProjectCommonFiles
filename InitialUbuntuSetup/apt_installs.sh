@@ -26,12 +26,6 @@ if ! command curl --version &>/dev/null; then
     ${SUDO} apt install curl
 fi
 
-INTERNET_STATUS=$(curl http://www.msftncsi.com/ncsi.txt)
-if [[ "${INTERNET_STATUS}" != "Microsoft NCSI" ]]; then
-    printError "Internet is not present\nExiting"
-    exit 0
-fi
-
 if ! command ssh -V &>/dev/null; then
     printStatus "Installing ssh"
     sudo apt install openssh-server
@@ -43,6 +37,9 @@ fi
 
 printStatus "Installing build-essential kit"
 ${SUDO} apt install build-essential
+
+printStatus "Installing OpenGL"
+${SUDO} apt install freeglut3-dev
 
 if ! command git version &>/dev/null; then
     printStatus "Installing git"
@@ -78,6 +75,3 @@ if ! command transmission-gtk --version &>/dev/null; then
 else
     printStatus "Transmission is already installed"
 fi
-
-printStatus "Installing OpenGL"
-${SUDO} apt install freeglut3-dev
