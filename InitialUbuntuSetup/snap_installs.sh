@@ -120,3 +120,12 @@ else
     printStatus "Trying update"
     ${SUDO} snap refresh remmina
 fi
+
+if [[ ! -f /bin/snap/telegram-desktop ]]; then
+    printStatus "Installing Telegram"
+    ${SUDO} snap install telegram-desktop
+else
+    printStatus "Remmina is already installed"
+    printStatus "Trying update"
+    ${SUDO} snap refresh telegram-desktop
+fi
