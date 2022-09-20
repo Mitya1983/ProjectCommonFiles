@@ -39,7 +39,7 @@ if [[ ! -f /bin/snap/cmake ]]; then
     ${SUDO} snap install cmake --classic
 else
     printStatus "CMake is already installed"
-    printStatus "Trying update"
+    printStatus "Trying to update"
     ${SUDO} snap refresh cmake
 fi
 
@@ -48,7 +48,7 @@ if [[ ! -f /bin/snap/bitwarden ]]; then
     ${SUDO} snap install bitwarden
 else
     printStatus "Bitwarden is already installed"
-    printStatus "Trying update"
+    printStatus "Trying to update"
     ${SUDO} snap refresh bitwarden
 fi
 
@@ -57,7 +57,7 @@ if [[ ! -f /bin/snap/clion ]]; then
     ${SUDO} snap install clion --classic
 else
     printStatus "CLion is already installed"
-    printStatus "Trying update"
+    printStatus "Trying to update"
     ${SUDO} snap refresh clion
 fi
 
@@ -90,7 +90,7 @@ if [[ ! -f /bin/snap/code ]]; then
     code --install-extension rogalmic.bash-debug
 else
     printStatus "VSCode is already installed"
-    printStatus "Trying update"
+    printStatus "Trying to update"
     ${SUDO} snap refresh code
 fi
 
@@ -99,7 +99,7 @@ if [[ ! -f /bin/snap/zoom-client ]]; then
     ${SUDO} snap install zoom-client
 else
     printStatus "Zoom is already installed"
-    printStatus "Trying update"
+    printStatus "Trying to update"
     ${SUDO} snap refresh zoom-client
 fi
 
@@ -108,7 +108,7 @@ if [[ ! -f /bin/snap/gimp ]]; then
     ${SUDO} snap install gimp
 else
     printStatus "GIMP is already installed"
-    printStatus "Trying update"
+    printStatus "Trying to update"
     ${SUDO} snap refresh gimp
 fi
 
@@ -117,7 +117,7 @@ if [[ ! -f /bin/snap/remmina ]]; then
     ${SUDO} snap install remmina
 else
     printStatus "Remmina is already installed"
-    printStatus "Trying update"
+    printStatus "Trying to update"
     ${SUDO} snap refresh remmina
 fi
 
@@ -125,7 +125,15 @@ if [[ ! -f /bin/snap/telegram-desktop ]]; then
     printStatus "Installing Telegram"
     ${SUDO} snap install telegram-desktop
 else
-    printStatus "Remmina is already installed"
-    printStatus "Trying update"
+    printStatus "Telegram is already installed"
+    printStatus "Trying to update"
     ${SUDO} snap refresh telegram-desktop
+fi
+if [[ ! -f /bin/snap/postman ]]; then
+    printStatus "Installing Postman"
+    ${SUDO} sudo snap install postman
+else
+    printStatus "Postman is already installed"
+    printStatus "Trying to update"
+    ${SUDO} snap refresh postman
 fi
