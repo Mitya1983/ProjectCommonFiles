@@ -137,3 +137,11 @@ else
     printStatus "Trying to update"
     ${SUDO} snap refresh postman
 fi
+if [[ ! -f /bin/snap/sqlitebrowser ]]; then
+    printStatus "Installing Postman"
+    ${SUDO} sudo snap install sqlitebrowser
+else
+    printStatus "Postman is already installed"
+    printStatus "Trying to update"
+    ${SUDO} snap refresh sqlitebrowser
+fi
