@@ -75,3 +75,10 @@ if ! command transmission-gtk --version &>/dev/null; then
 else
     printStatus "Transmission is already installed"
 fi
+
+if ! command glxinfo -h &>/dev/null; then
+    printStatus "Installing Transmission"
+    ${SUDO} apt install mesa-utils
+else
+    printStatus "Transmission is already installed"
+fi
