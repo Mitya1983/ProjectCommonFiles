@@ -61,6 +61,15 @@ else
     ${SUDO} snap refresh clion
 fi
 
+if [[ ! -f /bin/snap/valgrind ]]; then
+    printStatus "Installing Valgrind"
+    ${SUDO} snap install valgrind --classic
+else
+    printStatus "Valgrind is already installed"
+    printStatus "Trying to update"
+    ${SUDO} snap refresh valgrind
+fi
+
 if [[ ! -f /bin/snap/code ]]; then
     printStatus "Installing VSCode"
     ${SUDO} snap install code --classic
