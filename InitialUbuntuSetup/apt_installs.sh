@@ -82,3 +82,10 @@ if ! command glxinfo -h &>/dev/null; then
 else
     printStatus "Transmission is already installed"
 fi
+
+if ! command perf -h &>/dev/null; then
+    printStatus "Installing Perf"
+    ${SUDO} apt install linux-tools-$(uname -r) linux-tools-generic
+else
+    printStatus "Perf is already installed"
+fi
