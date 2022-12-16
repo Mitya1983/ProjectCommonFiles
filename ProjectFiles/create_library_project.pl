@@ -37,7 +37,6 @@ open(FH, '>', "CMakeLists.txt") or die "Couldn't create file CMakeLists.txt $!";
 print(FH "cmake_minimum_required(VERSION 3.17)
 
 project($project_name LANGUAGES CXX DESCRIPTION \"\")
-include(CustomFunctions.cmake)
 
 set(CMAKE_CXX_STANDARD 20)
 
