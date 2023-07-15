@@ -77,10 +77,10 @@ else
 fi
 
 if ! command glxinfo -h &>/dev/null; then
-    printStatus "Installing Transmission"
+    printStatus "Installing glxinfo"
     ${SUDO} apt install mesa-utils
 else
-    printStatus "Transmission is already installed"
+    printStatus "glxinfo is already installed"
 fi
 
 if ! command perf -h &>/dev/null; then
