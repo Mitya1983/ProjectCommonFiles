@@ -1,0 +1,27 @@
+<keymap version="1" name="Eclipse copy" parent="Eclipse">
+  <action id="BuildProject">
+    <keyboard-shortcut first-keystroke="alt b" />
+  </action>
+  <action id="CIDR.Lang.SwitchHeaderSource">
+    <keyboard-shortcut first-keystroke="f10" />
+    <keyboard-shortcut first-keystroke="ctrl alt up" />
+  </action>
+  <action id="CloudConfigUpdateApi">
+    <keyboard-shortcut first-keystroke="shift ctrl alt s" />
+  </action>
+  <action id="EditorSplitLine">
+    <keyboard-shortcut first-keystroke="alt enter" />
+  </action>
+  <action id="InspectCode">
+    <keyboard-shortcut first-keystroke="shift ctrl i" />
+  </action>
+  <action id="QuickImplementations" />
+  <action id="ShowIntentionActions">
+    <keyboard-shortcut first-keystroke="ctrl 1" />
+    <keyboard-shortcut first-keystroke="ctrl enter" />
+  </action>
+  <action id="ShowPopupMenu">
+    <keyboard-shortcut first-keystroke="context_menu" />
+  </action>
+  <action id="XDebugger.Inspect" />
+</keymap>
