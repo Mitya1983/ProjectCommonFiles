@@ -1,0 +1,44 @@
+<templateSet group="C/C++">
+  <template name="inc" value="#include &lt;$1$&gt;" description="include &lt;&gt;" toReformat="false" toShortenFQNames="true">
+    <variable name="1" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="c" value="true" />
+      <option name="cpp" value="true" />
+    </context>
+  </template>
+  <template name="incl" value="#include &quot;$1$&quot;" description="include &quot;&quot;" toReformat="false" toShortenFQNames="true">
+    <variable name="1" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="c" value="true" />
+      <option name="cpp" value="true" />
+    </context>
+  </template>
+  <template name="class" value="class $ClassName$ {&#10;    public:&#10;        $ClassName$() = default;&#10;&#10;        $ClassName$(const $ClassName$&amp;) = default;&#10;        $ClassName$($ClassName$&amp;&amp;) = default;&#10;        $ClassName$&amp; operator=(const $ClassName$&amp;) = default;&#10;        $ClassName$&amp; operator=($ClassName$&amp;&amp;) = default;&#10;       &#10;        ~$ClassName$() = default;&#10;        &#10;    private:&#10;    &#10;};" description="Class woth default contructors and operators" toReformat="true" toShortenFQNames="true">
+    <variable name="ClassName" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="cpp" value="true" />
+    </context>
+  </template>
+  <template name="class_move_only" value="class $ClassName$ {&#10;    public:&#10;        $ClassName$() = default;&#10;&#10;        $ClassName$(const $ClassName$&amp;) = delete;&#10;        $ClassName$($ClassName$&amp;&amp;) = default;&#10;        $ClassName$&amp; operator=(const $ClassName$&amp;) = delete;&#10;        $ClassName$&amp; operator=($ClassName$&amp;&amp;) = default;&#10;       &#10;        ~$ClassName$() = default;&#10;        &#10;    private:&#10;    &#10;};" description="Class with only move allowed" toReformat="false" toShortenFQNames="true">
+    <variable name="ClassName" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="cpp" value="true" />
+    </context>
+  </template>
+  <template name="clas_singleton" value="class $ClassName$ {&#10;        $ClassName$() = default;&#10;        auto instance() -&gt; $ClassName$&amp;;&#10;    public:&#10;&#10;        $ClassName$(const $ClassName$&amp;) = delete;&#10;        $ClassName$($ClassName$&amp;&amp;) = delete;&#10;        $ClassName$&amp; operator=(const $ClassName$&amp;) = delete;&#10;        $ClassName$&amp; operator=($ClassName$&amp;&amp;) = delete;&#10;       &#10;        ~$ClassName$() = default;&#10;        &#10;    private:&#10;    &#10;};" description="Singleton" toReformat="false" toShortenFQNames="true">
+    <variable name="ClassName" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="cpp" value="true" />
+    </context>
+  </template>
+  <template name="unus" value="[[maybe_unused]] " description="maybe unused" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="cpp" value="true" />
+    </context>
+  </template>
+  <template name="nodi" value="[[nodiscard]] " description="nodiscard" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="cpp" value="true" />
+    </context>
+  </template>
+</templateSet>

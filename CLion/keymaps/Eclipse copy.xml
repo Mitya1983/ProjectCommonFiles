@@ -1,4 +1,11 @@
 <keymap version="1" name="Eclipse copy" parent="Eclipse">
+  <action id="ActivateMessagesToolWindow">
+    <keyboard-shortcut first-keystroke="alt m" />
+  </action>
+  <action id="ActivateRunToolWindow">
+    <keyboard-shortcut first-keystroke="alt 4" />
+    <keyboard-shortcut first-keystroke="alt r" />
+  </action>
   <action id="BuildProject">
     <keyboard-shortcut first-keystroke="alt b" />
   </action>
@@ -23,5 +30,7 @@
   <action id="ShowPopupMenu">
     <keyboard-shortcut first-keystroke="context_menu" />
   </action>
+  <action id="Unwrap" />
+  <action id="Vcs.ToggleAmendCommitMode" />
   <action id="XDebugger.Inspect" />
 </keymap>
